@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alga Wellness | Restoration from the Ocean</title>
+  <meta name="description" content="Alga Wellness, Vancouver, BC. Join the list for upcoming experiences and product drops.">
+  <meta name="theme-color" content="#2D5A4E">
+  <meta property="og:title" content="Alga Wellness | Restoration from the Ocean">
+  <meta property="og:description" content="Join the list for upcoming experiences and product drops.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="alga-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="logo-frame">
+        <img src="alga-logo.png" alt="Alga Wellness" width="2000" height="2000">
+      </div>
+      <h1 id="hero-title">Restoration from the Ocean</h1>
+      <a class="btn btn-light" href="#join">Join the list</a>
+    </section>
+
+    <!-- WAITLIST -->
+    <section class="waitlist" id="join" aria-labelledby="join-title">
+      <div class="waitlist-inner">
+        <div class="waitlist-copy">
+          <h2 id="join-title">Stay in the loop.</h2>
+          <p>Add your email to keep in the loop on upcoming experiences and product drops.</p>
+        </div>
+
+        <form id="signup-form" class="form" method="post" novalidate>
+          <div class="field">
+            <label for="first-name">First name <span class="optional">(optional)</span></label>
+            <input id="first-name" name="fields[name]" type="text" autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="fields[email]" type="email" autocomplete="email" required aria-describedby="form-message">
+          </div>
+
+          <div class="consent">
+            <input id="consent" name="consent" type="checkbox" required>
+            <label for="consent">I agree to receive emails from Alga Wellness about upcoming experiences and product drops. I can unsubscribe at any time. See our <a href="privacy.html">Privacy Policy</a>.</label>
+          </div>
+
+          <!-- Required by MailerLite. Do not remove. -->
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+
+          <button class="btn btn-dark" type="submit" id="submit-btn">Join the List</button>
+          <p id="form-message" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-name">Alga Wellness</p>
+        <p>Restoration from the Ocean</p>
+        <p>Vancouver, BC</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/algawellness" rel="noopener">Instagram</a></li>
+        <!-- To add a contact email later, add: <li><a href="mailto:you@yourdomain.com">you@yourdomain.com</a></li> -->
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
