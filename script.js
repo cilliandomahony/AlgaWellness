@@ -4,7 +4,7 @@
    https://assets.mailerlite.com/jsonp/123456/forms/987654321/subscribe
    (See README.md, "Connect MailerLite")
    ============================================================ */
-const MAILERLITE_FORM_URL = "";
+const MAILERLITE_FORM_URL = "https://assets.mailerlite.com/jsonp/1475703/forms/202855800037705084/subscribe";
 
 const form = document.getElementById("signup-form");
 const message = document.getElementById("form-message");
@@ -45,7 +45,7 @@ form.addEventListener("submit", async (event) => {
 
     if (response.ok && result.success) {
       form.reset();
-      show("You're on the list. Check your inbox if we've asked you to confirm your email.", "success");
+      show("You're on the list. Time to ride the wave.", "success");
     } else {
       const detail = result.errors && Object.values(result.errors).flat()[0];
       show(detail || "We couldn't add your email. Please check it and try again.", "error");
