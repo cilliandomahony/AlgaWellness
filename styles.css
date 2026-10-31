@@ -44,6 +44,12 @@ a { color: inherit; }
 .message.error { color: var(--error); }
 .message.success { color: var(--green); }
 
+/* Signup bubbles (play for about a second after a successful signup) */
+.btn-wrap { position: relative; }
+.btn-wrap .btn { position: relative; z-index: 2; }
+.bubble { position: absolute; bottom: 1.2rem; z-index: 1; border: 1.5px solid var(--green); border-radius: 50%; opacity: 0; pointer-events: none; animation: bubble-rise var(--t) ease-out var(--d) forwards; }
+@keyframes bubble-rise { 0% { transform: translate(0, 0) scale(.6); opacity: 0; } 15% { opacity: .9; } 100% { transform: translate(var(--x), -150px) scale(1); opacity: 0; } }
+
 /* Footer */
 .footer { background: var(--green); color: var(--beige); padding: 3.5rem 1.5rem; font-size: .95rem; }
 .footer-inner { max-width: 1040px; margin: 0 auto; display: grid; gap: 2rem; }
@@ -63,4 +69,4 @@ a { color: inherit; }
 .doc h2 { font-size: 1.6rem; margin: 2rem 0 .5rem; }
 .doc .back { display: inline-block; margin-bottom: 2rem; }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .bubble { display: none; } }
