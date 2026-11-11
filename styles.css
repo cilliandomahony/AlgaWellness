@@ -44,6 +44,13 @@ a { color: inherit; }
 .message.error { color: var(--error); }
 .message.success { color: var(--green); }
 
+/* Pop-up waiver */
+.popup { background: var(--green); color: var(--beige); padding: clamp(4rem, 10vw, 7rem) 1.5rem; border-bottom: 1px solid rgba(252, 244, 228, .25); }
+.popup-inner { max-width: 1040px; margin: 0 auto; display: grid; gap: 2rem; }
+.popup .eyebrow { margin: 0 0 .75rem; font-size: .85rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+.popup h2 { font-size: clamp(2.25rem, 6vw, 3.5rem); }
+.popup-action p { margin: 0 0 1.75rem; max-width: 34ch; font-size: 1.15rem; }
+
 /* Signup bubbles (play for about a second after a successful signup) */
 .btn-wrap { position: relative; }
 .btn-wrap .btn { position: relative; z-index: 2; }
@@ -59,6 +66,7 @@ a { color: inherit; }
 
 @media (min-width: 800px) {
   .waitlist-inner { grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .popup-inner { grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
   .footer-inner { grid-template-columns: 1fr auto; }
   .footer-links { text-align: right; }
 }
